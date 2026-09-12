@@ -1,0 +1,7 @@
+.DS_Store
+
+# Internal working notes and source documents. This repo is public via GitHub Pages.
+content/
+media/
+PRODUCT.md
+.impeccable/
