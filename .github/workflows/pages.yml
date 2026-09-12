@@ -21,7 +21,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+
+      - name: Check every reference resolves
+        run: python3 tools/check-links.py
 
       # Copy only what the site needs. PRODUCT.md, README.md and local/ stay unpublished.
       - name: Stage the published files
@@ -31,9 +34,9 @@ jobs:
           cp -r assets _site/
           touch _site/.nojekyll
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
