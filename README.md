@@ -36,6 +36,25 @@ When you want `ratelrobotics.eu` live:
 4. Add `echo ratelrobotics.eu > _site/CNAME` to the workflow's staging step.
 5. Redirect `ratelrobotics.com` and `ratelrobotics.ee` to `ratelrobotics.eu`.
 
+## Making changes
+
+Every push or merge to `main` redeploys automatically. There is no manual publish step.
+
+    git switch -c tweak-the-specs
+    # edit, then check it locally
+    python3 -m http.server 8000
+    git commit -am "Update payload figure"
+    git push -u origin tweak-the-specs
+    gh pr create --fill
+
+Merging the PR deploys. A run takes about 40 seconds; watch it with
+`gh run watch --repo Ratel-Robotics-EU/ratel-public-web`.
+
+Small fixes can go straight to `main` — push and it ships.
+
+Read `PRODUCT.md` before changing copy, specifications or claims. It records which figures
+are confirmed, which were superseded, and what must not be published.
+
 ## Local preview
 
     python3 -m http.server 8000
