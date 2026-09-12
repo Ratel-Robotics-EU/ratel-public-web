@@ -47,10 +47,16 @@ Every push or merge to `main` redeploys automatically. There is no manual publis
     git push -u origin tweak-the-specs
     gh pr create --fill
 
-Merging the PR deploys. A run takes about 40 seconds; watch it with
+Opening the PR runs `tools/check-links.py`, which fails if any page points at a file or an
+anchor that does not exist. Merging deploys; a run takes about 20 seconds. Watch it with
 `gh run watch --repo Ratel-Robotics-EU/ratel-public-web`.
 
-Small fixes can go straight to `main` — push and it ships.
+Small fixes can go straight to `main` — push and it ships. The same check runs before the
+deploy step, so a broken reference stops the release rather than shipping.
+
+Run the check yourself before pushing:
+
+    python3 tools/check-links.py
 
 Read `PRODUCT.md` before changing copy, specifications or claims. It records which figures
 are confirmed, which were superseded, and what must not be published.
