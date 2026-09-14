@@ -125,7 +125,8 @@ proportion of non-Chinese content. Everything else is ordinary commercial discre
 
 **AI renders — must never be presented as photographs.** `badger-terrain`, `badger-payload`,
 `badger-3q`, `badger-scale`, `badger-detail` all carry a visible "Render" badge and a
-`class="render"` marker until real photography replaces them.
+`class="render"` marker until real photography replaces them. The founder can shoot
+replacements at the workshop; industrial and nature backgrounds are both available.
 
 **Absent. Do not fabricate:** no customers, no contracts, no procurement wins, no units
 delivered, no revenue. No CE marking, no MIL-STD compliance, no IP rating, no NATO stock
