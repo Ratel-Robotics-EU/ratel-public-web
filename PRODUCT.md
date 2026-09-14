@@ -83,6 +83,8 @@ dimensioned drawing; performance figures are founder-confirmed.
 | Signature | low acoustic, low thermal |
 | Control | teleoperated; waypoint and autonomy in development |
 | Communications | Estonian-built radio, Starlink, repeater drone |
+| CASEVAC | up to two casualties on the bed |
+| Towing and recovery | trailer hitch and winch; no rated capacity published |
 
 Superseded, never republish: 300 kg payload, 200 km range, 350 kg weight, 1500×1200×900
 dimensions, 250 mm clearance, 35 or 38 km/h.
