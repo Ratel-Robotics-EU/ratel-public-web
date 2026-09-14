@@ -74,7 +74,7 @@ dimensioned drawing; performance figures are founder-confirmed.
 | | |
 |---|---|
 | Payload | 250 kg |
-| Curb weight | 350 kg |
+| Curb weight | approx. 450 kg (founder estimate, 2026-09-14) |
 | Range | up to 150 km, terrain and profile dependent |
 | Maximum speed | 30 km/h |
 | Power | 48 V lithium-ion with BMS, 15 kWh |
@@ -84,13 +84,14 @@ dimensioned drawing; performance figures are founder-confirmed.
 | Control | teleoperated; waypoint and autonomy in development |
 | Communications | Estonian-built radio, Starlink, repeater drone |
 
-Superseded, never republish: 300 kg payload, 200 km range, 450 kg weight, 1500×1200×900
+Superseded, never republish: 300 kg payload, 200 km range, 350 kg weight, 1500×1200×900
 dimensions, 250 mm clearance, 35 or 38 km/h.
 
 - **Teleoperated today.** No autonomy ships. Earlier source material contradicted itself on
   this; the resolved truth is "teleoperated, autonomy in development".
-- TRL 6. Testing with Kaitseliit. Estonian Defence Forces trials Q1–Q2. Target TRL 7 and an
-  operational demonstration in 2026; production and export readiness Q4 2026.
+- TRL 6. Field testing with Kaitseliit. Roadmap is undated after 2026: operational
+  validation with defence users, then design-for-manufacture and low-rate production. Do
+  not publish quarter or year targets for TRL 7 or production.
 - Pre-revenue. Zero revenue and zero employees on payroll in every quarter since
   incorporation — this is public in the Estonian register and cannot be hidden.
 - Four equal shareholders, one board member (Rain-Alari Külm).
