@@ -104,7 +104,9 @@ proportion of non-Chinese content. Everything else is ordinary commercial discre
 
 ## Brand Commitments
 
-- Product name **Badger**; legal entity **Ratel Robotics OÜ**. Badger leads, the company is
+- Product name **Badger**; the current model is **Badger 2.0** (founder, 2026-09-15). The
+  version appears where the current vehicle is named, without explanation. Legal entity
+  **Ratel Robotics OÜ**. Badger leads, the company is
   secondary. *Mäger* is the Estonian name and earns a short heritage note on the company
   page — it is not a second product name.
 - Voice: plain, short sentences, active verbs. No defence-marketing inflation. State the
