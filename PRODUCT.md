@@ -125,13 +125,10 @@ proportion of non-Chinese content. Everything else is ordinary commercial discre
 - ERR Terevisioon segment "Mäger Ukrainasse", 08.10.2025.
 - Tehnopol Defence Business Lab; Defence Estonia cluster membership.
 - Batcomms communications module integration since 10.11.2025.
-- One genuine photograph: `assets/img/badger-photo.webp`, conference stand, Tallinn, January 2026.
+- Genuine photographs: `assets/img/badger-photo.webp`, conference stand, Tallinn, January 2026.
+  All other `assets/img/badger-*.webp` photos come from the founder's photoshoot of
+  2026-09-21 (originals in `local/media/photoshoot/`).
 - Genuine dimensioned engineering drawing: `assets/img/badger-drawing-dark.webp`.
-
-**AI renders — must never be presented as photographs.** `badger-terrain`, `badger-payload`,
-`badger-3q`, `badger-scale`, `badger-detail` all carry a visible "Render" badge and a
-`class="render"` marker until real photography replaces them. The founder can shoot
-replacements at the workshop; industrial and nature backgrounds are both available.
 
 **Absent. Do not fabricate:** no customers, no contracts, no procurement wins, no units
 delivered, no revenue. No CE marking, no MIL-STD compliance, no IP rating, no NATO stock
@@ -143,7 +140,7 @@ number. No employee headcount above zero. No radar-cross-section measurement.
    at, not with company narrative.
 2. **A published figure is read as a commitment.** Publish measured values, or label the
    target as a target. Never publish an aspiration as a specification.
-3. **A render never passes as a photograph.** The badge stays until real photography lands.
+3. **A render never passes as a photograph.** Any render added later carries a visible "Render" badge.
 4. **Disambiguate on every page.** Tallinn, Estonia, and the registry code.
 5. **Say the early-stage truth plainly.** The register is public; pre-revenue stated with
    confidence beats pre-revenue discovered by a reader.

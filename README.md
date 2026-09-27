@@ -69,9 +69,6 @@ are confirmed, which were superseded, and what must not be published.
 
 - `sales@ratelrobotics.eu` and `jobs@ratelrobotics.eu` are published on the site but do not
   exist yet. Mail runs on `.eu` only; `.com` and `.ee` have no MX record.
-- Five images are AI renders, each carrying a visible badge and a `class="render"` marker.
-  `index.html` has a TODO naming the files. Replace with real photography, then delete the
-  class, the `<span class="render-badge">` and the `.render` rules in `assets/style.css`.
 
 ## Design notes
 
