@@ -11,7 +11,7 @@ from urllib.parse import unquote, urldefrag
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = ["index.html", "company.html", "careers.html"]
 
-REF = re.compile(r'(?:src|href)\s*=\s*"([^"]+)"')
+REF = re.compile(r'(?:src|href|poster)\s*=\s*"([^"]+)"')
 ID = re.compile(r'\bid\s*=\s*"([^"]+)"')
 CSS_URL = re.compile(r'url\(\s*["\']?([^"\')]+)["\']?\s*\)')
 

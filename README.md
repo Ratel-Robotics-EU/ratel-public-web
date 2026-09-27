@@ -10,6 +10,7 @@ Static site for Ratel Robotics OÜ and the Badger UGV. No build step, no depende
 - `assets/style.css`, `assets/fonts.css`, `assets/favicon.svg`
 - `assets/fonts/` — Archivo variable (SIL OFL), self-hosted, no third-party requests
 - `assets/img/` — WebP, each sized to the width it actually displays at
+- `assets/video/` — short muted H.264 loops at 1280 px, each with a WebP poster frame
 - `PRODUCT.md` — product decisions and durable constraints. Read before changing copy or specs.
 - `local/` — working files: source documents, original photography, notes. Gitignored.
 

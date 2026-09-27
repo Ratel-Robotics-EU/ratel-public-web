@@ -13,7 +13,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:400 16.5px/1.65 var(--sans);font-stretch:100%;
   -webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto;display:block}
+img,video{max-width:100%;height:auto;display:block}
 p{margin:0 0 1.1rem}
 h1,h2,h3{margin:0;font-weight:800;font-stretch:118%;letter-spacing:-.035em}
 h1,h2{line-height:1.05}
@@ -126,10 +126,10 @@ table.specs td{font-weight:600;color:var(--fg);
 figure{margin:0}
 figcaption{font-size:14px;color:var(--muted2);margin-top:15px;max-width:62ch}
 .band{margin-top:clamp(36px,4.5vw,60px)}
-.band img{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)}
+.band img,.band video{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line)}
 .two-up{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.4vw,32px);margin-top:28px}
 .two-up figure{display:flex;flex-direction:column}
-.two-up img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line)}
+.two-up img,.two-up video{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line)}
 .drawing{margin-top:clamp(36px,4.5vw,60px);background:var(--bg2);border:1px solid var(--line);
   padding:clamp(22px,4vw,56px)}
 .drawing img{margin-inline:auto;aspect-ratio:auto}

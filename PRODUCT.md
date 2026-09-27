@@ -128,6 +128,8 @@ proportion of non-Chinese content. Everything else is ordinary commercial discre
 - Genuine photographs: `assets/img/badger-photo.webp`, conference stand, Tallinn, January 2026.
   All other `assets/img/badger-*.webp` photos come from the founder's photoshoot of
   2026-09-21 (originals in `local/media/photoshoot/`).
+- Genuine video of Badger 2.0: `assets/video/badger-kerb.mp4` (2026-09-21) and
+  `assets/video/badger-trailer.mp4` (2026-09-26), cut from `local/media/videos/`.
 - Genuine dimensioned engineering drawing: `assets/img/badger-drawing-dark.webp`.
 
 **Absent. Do not fabricate:** no customers, no contracts, no procurement wins, no units
