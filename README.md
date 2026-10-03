@@ -35,6 +35,7 @@ When you want `ratelrobotics.eu` live:
 2. Settings → Pages → Custom domain → `ratelrobotics.eu`, then wait for the check to pass.
 3. Tick **Enforce HTTPS**.
 4. Add `echo ratelrobotics.eu > _site/CNAME` to the workflow's staging step.
+   Change the `og:image` URL in `index.html` to the new domain.
 5. Redirect `ratelrobotics.com` and `ratelrobotics.ee` to `ratelrobotics.eu`.
 
 ## Making changes

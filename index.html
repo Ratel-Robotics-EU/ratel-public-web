@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <meta property="og:title" content="Badger UGV — electric unmanned ground vehicle">
 <meta property="og:description" content="250 kg payload. Resupply, sensors, drone charging, light CASEVAC. Built in Tallinn, Estonia.">
-<meta property="og:image" content="assets/img/badger-og.webp">
+<meta property="og:image" content="https://ratel-robotics-eu.github.io/ratel-public-web/assets/img/badger-og.webp">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization",
@@ -100,18 +100,18 @@
 
 <section id="specifications">
   <div class="wrap">
-    <div class="head"><h2>Badger 2.0, current configuration</h2></div>
+    <div class="head"><h2>Specifications</h2></div>
     <div class="spec-split">
-      <table class="specs">
+      <table class="specs" aria-label="Performance and power">
         <tr><th scope="row">Payload</th><td>250 kg</td></tr>
         <tr><th scope="row">Curb weight</th><td>Approx. 450 kg</td></tr>
-        <tr><th scope="row">Range</th><td>Up to 150 km<sup>*</sup></td></tr>
+        <tr><th scope="row">Range</th><td>Up to 150 km<sup><a href="#range-note" aria-label="Range note">*</a></sup></td></tr>
         <tr><th scope="row">Maximum speed</th><td>30 km/h</td></tr>
         <tr><th scope="row">Power</th><td>48 V lithium-ion with BMS, 15 kWh</td></tr>
         <tr><th scope="row">Suspension</th><td>Independent, upgrade-ready</td></tr>
         <tr><th scope="row">Signature</th><td>Low acoustic, low thermal</td></tr>
       </table>
-      <table class="specs">
+      <table class="specs" aria-label="Dimensions and systems">
         <tr><th scope="row">Dimensions</th><td>1800 &times; 1250 &times; 1050 mm</td></tr>
         <tr><th scope="row">Wheelbase</th><td>1200 mm</td></tr>
         <tr><th scope="row">Ground clearance</th><td>350 mm</td></tr>
@@ -121,7 +121,7 @@
         <tr><th scope="row">Transport</th><td>Fits a microbus or a standard trailer</td></tr>
       </table>
     </div>
-    <p class="spec-note"><sup>*</sup>Range depends on terrain, load and duty profile. These
+    <p class="spec-note" id="range-note"><sup aria-hidden="true">*</sup>Range depends on terrain, load and duty profile. These
       figures describe the current build and change as the platform develops. Ask us for the
       configuration that matches your requirement.</p>
     <figure class="drawing">
@@ -139,7 +139,7 @@
     </div>
     <figure class="band">
       <video src="assets/video/badger-trailer.mp4" poster="assets/video/badger-trailer.webp"
-        width="1280" height="720" autoplay muted loop playsinline controls preload="metadata"
+        width="1280" height="720" muted loop playsinline controls preload="none"
         aria-label="Badger drives up a ramp onto a car trailer."></video>
       <figcaption>Driven up the ramp onto a standard car trailer.</figcaption>
     </figure>
@@ -166,7 +166,7 @@
         alt="Close view of the front suspension, coil-over damper and hub drive.">
         <figcaption>Independent suspension and hub drive at each corner.</figcaption></figure>
       <figure><video src="assets/video/badger-kerb.mp4" poster="assets/video/badger-kerb.webp"
-        width="1280" height="720" autoplay muted loop playsinline controls preload="metadata"
+        width="1280" height="720" muted loop playsinline controls preload="none"
         aria-label="Badger climbing over a concrete kerb onto grass."></video>
         <figcaption>Crossing a kerb with the suspension articulated.</figcaption></figure>
     </div>
@@ -247,8 +247,11 @@
   const h = document.querySelector('header');
   const onScroll = () => h.classList.toggle('stuck', window.scrollY > 8);
   addEventListener('scroll', onScroll, {passive:true}); onScroll();
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('video[autoplay]').forEach(v => { v.autoplay = false; v.pause(); });
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.play(); io.unobserve(e.target); }
+    }), {threshold: .25});
+    document.querySelectorAll('video').forEach(v => io.observe(v));
   }
 </script>
 </body>
