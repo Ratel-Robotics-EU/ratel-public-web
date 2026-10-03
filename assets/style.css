@@ -9,7 +9,7 @@
   --sans:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);
   font:400 16.5px/1.65 var(--sans);font-stretch:100%;
   -webkit-font-smoothing:antialiased}
@@ -92,9 +92,10 @@ nav a.cta:hover{background:var(--accent-hi)}
 .record strong{color:var(--fg);font-weight:700}
 
 section{padding-block:clamp(60px,7.5vw,104px);border-bottom:1px solid var(--line)}
+h1{font-size:clamp(36px,5.2vw,64px)}
 h2{font-size:clamp(31px,4.1vw,50px)}
 .head{max-width:860px;margin-bottom:clamp(40px,5vw,64px)}
-h2{max-width:19ch}
+h1,h2{max-width:19ch}
 .head .lede{margin-top:20px;max-width:64ch}
 
 /* capability rows */
@@ -194,7 +195,8 @@ footer nav a{color:var(--muted)}
   .brand svg{width:22px;height:22px}
   nav{flex:1 0 100%;flex-wrap:nowrap;justify-content:space-between;
     align-items:center;gap:12px}
-  nav a{font-size:14.5px}
+  html{scroll-padding-top:104px}
+  nav a{font-size:14.5px;padding-block:4px}
   /* the in-page anchor is reachable from the hero button */
   nav a[href$="#specifications"]{display:none}
   nav a.cta{padding:8px 14px;font-size:14px;white-space:nowrap}
@@ -204,4 +206,9 @@ footer nav a{color:var(--muted)}
   .hero-inner{padding-block:30px 38px}
   .btns{gap:10px;margin-top:26px}
   .btn{padding:13px 20px;font-size:15px}
+}
+@media (max-width:360px){
+  .wrap{padding-inline:16px}
+  nav{gap:8px}
+  nav a.cta{padding-inline:11px}
 }

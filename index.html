@@ -32,8 +32,8 @@
       <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="11" fill="#b6cf5e"/><path d="M32 12c-9 0-16 7-16 17 0 9 7 17 16 17s16-8 16-17c0-10-7-17-16-17z" fill="#0e110d"/><path d="M32 14c-2.4 0-4.6.5-6.5 1.4L28 44h8l2.5-28.6A15 15 0 0 0 32 14z" fill="#b6cf5e"/></svg>
       Ratel <em>Robotics</em>
     </a>
-    <nav>
-      <a href="index.html">Badger</a>
+    <nav aria-label="Primary">
+      <a href="index.html" aria-current="page">Badger</a>
       <a href="#specifications">Specifications</a>
       <a href="company.html">Company</a>
       <a href="careers.html">Careers</a>
@@ -235,7 +235,7 @@
       Registry code 16697173 &middot; VAT EE102628717 &middot; Tallinn, Estonia<br>
       An Estonian company. Not affiliated with any similarly named company in another country.
     </div>
-    <nav>
+    <nav aria-label="Footer">
       <a href="index.html">Badger</a>
       <a href="company.html">Company</a>
       <a href="careers.html">Careers</a>
@@ -247,6 +247,9 @@
   const h = document.querySelector('header');
   const onScroll = () => h.classList.toggle('stuck', window.scrollY > 8);
   addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(v => { v.autoplay = false; v.pause(); });
+  }
 </script>
 </body>
 </html>
