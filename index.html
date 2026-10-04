@@ -45,7 +45,9 @@
 <main id="main">
 
 <div class="hero">
-  <img class="hero-bg" src="assets/img/badger-hero.webp" width="1600" height="900" alt="" fetchpriority="high">
+  <img class="hero-bg" src="assets/img/badger-hero.webp"
+       srcset="assets/img/badger-hero-800.webp 800w, assets/img/badger-hero.webp 1600w"
+       sizes="100vw" width="1600" height="900" alt="" fetchpriority="high">
   <div class="wrap hero-inner">
     <h1>Badger 2.0</h1>
     <p class="hero-sub">An electric unmanned ground vehicle for small-unit logistics.</p>
@@ -91,7 +93,9 @@
           Tows a trailer and carries a winch for recovery.</p></div>
     </div>
     <figure class="band">
-      <img loading="lazy" decoding="async" src="assets/img/badger-payload.webp" width="1448" height="815"
+      <img loading="lazy" decoding="async" src="assets/img/badger-payload.webp"
+           srcset="assets/img/badger-payload-800.webp 800w, assets/img/badger-payload.webp 1448w"
+           sizes="(max-width:1160px) calc(100vw - 48px), 1112px" width="1448" height="815"
            alt="Badger loaded with ammunition boxes, a winch, a spare wheel and a camouflage pack.">
       <figcaption>A squad&rsquo;s stores, strapped to the bed. Up to 250&nbsp;kg a run.</figcaption>
     </figure>
@@ -125,20 +129,26 @@
       figures describe the current build and change as the platform develops. Ask us for the
       configuration that matches your requirement.</p>
     <figure class="drawing">
-      <img loading="lazy" decoding="async" src="assets/img/badger-drawing-dark.webp" width="1600" height="695"
+      <img loading="lazy" decoding="async" src="assets/img/badger-drawing-dark.webp"
+           srcset="assets/img/badger-drawing-dark-800.webp 800w, assets/img/badger-drawing-dark.webp 1600w"
+           sizes="(max-width:760px) 620px, (max-width:1160px) calc(100vw - 48px), 1112px" width="1600" height="695"
            alt="Dimensioned side and rear views of Badger: 1800 mm long, 1250 mm wide, 1050 mm high, 1200 mm wheelbase, 350 mm ground clearance.">
       <figcaption>Side and rear elevations. Dimensions in millimetres.</figcaption>
     </figure>
     <div class="two-up">
-      <figure><img loading="lazy" decoding="async" src="assets/img/badger-3q.webp" width="1100" height="619"
+      <figure><img loading="lazy" decoding="async" src="assets/img/badger-3q.webp"
+           srcset="assets/img/badger-3q-800.webp 800w, assets/img/badger-3q.webp 1100w"
+           sizes="(max-width:880px) calc(100vw - 48px), 540px" width="1100" height="619"
         alt="Badger seen from the front three-quarter angle.">
         <figcaption>Bull bar, skid plate and independent suspension at all four corners.</figcaption></figure>
-      <figure><img loading="lazy" decoding="async" src="assets/img/badger-scale.webp" width="1100" height="619"
+      <figure><img loading="lazy" decoding="async" src="assets/img/badger-scale.webp"
+           srcset="assets/img/badger-scale-800.webp 800w, assets/img/badger-scale.webp 1100w"
+           sizes="(max-width:880px) calc(100vw - 48px), 540px" width="1100" height="619"
         alt="An operator stands beside Badger with a handheld controller. The vehicle is roughly waist height.">
         <figcaption>Waist high beside its operator, driven from a handheld controller.</figcaption></figure>
     </div>
     <figure class="band">
-      <video src="assets/video/badger-trailer.mp4" poster="assets/video/badger-trailer.webp"
+      <video src="assets/video/badger-trailer.mp4" data-poster="assets/video/badger-trailer.webp"
         width="1280" height="720" muted loop playsinline controls preload="none"
         aria-label="Badger drives up a ramp onto a car trailer."></video>
       <figcaption>Driven up the ramp onto a standard car trailer.</figcaption>
@@ -162,10 +172,12 @@
         source for drones, radios and sensors.</p>
     </div>
     <div class="two-up">
-      <figure><img loading="lazy" decoding="async" src="assets/img/badger-detail.webp" width="1100" height="619"
+      <figure><img loading="lazy" decoding="async" src="assets/img/badger-detail.webp"
+           srcset="assets/img/badger-detail-800.webp 800w, assets/img/badger-detail.webp 1100w"
+           sizes="(max-width:880px) calc(100vw - 48px), 540px" width="1100" height="619"
         alt="Close view of the front suspension, coil-over damper and hub drive.">
         <figcaption>Independent suspension and hub drive at each corner.</figcaption></figure>
-      <figure><video src="assets/video/badger-kerb.mp4" poster="assets/video/badger-kerb.webp"
+      <figure><video src="assets/video/badger-kerb.mp4" data-poster="assets/video/badger-kerb.webp"
         width="1280" height="720" muted loop playsinline controls preload="none"
         aria-label="Badger climbing over a concrete kerb onto grass."></video>
         <figcaption>Crossing a kerb with the suspension articulated.</figcaption></figure>
@@ -193,7 +205,9 @@
           and preparation for low-rate production.</p></li>
       </ul>
       <figure>
-        <img loading="lazy" decoding="async" src="assets/img/badger-photo.webp" width="1100" height="603"
+        <img loading="lazy" decoding="async" src="assets/img/badger-photo.webp"
+           srcset="assets/img/badger-photo-800.webp 800w, assets/img/badger-photo.webp 1100w"
+           sizes="(max-width:880px) calc(100vw - 48px), 540px" width="1100" height="603"
              alt="The Badger prototype on display at a defence conference in Tallinn, January 2026.">
         <figcaption>The prototype at a defence conference in Tallinn, January 2026.</figcaption>
       </figure>
@@ -247,6 +261,10 @@
   const h = document.querySelector('header');
   const onScroll = () => h.classList.toggle('stuck', window.scrollY > 8);
   addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  const near = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.poster = e.target.dataset.poster; near.unobserve(e.target); }
+  }), {rootMargin: '600px'});
+  document.querySelectorAll('video').forEach(v => near.observe(v));
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const io = new IntersectionObserver(entries => entries.forEach(e => {
       if (e.isIntersecting) { e.target.play(); io.unobserve(e.target); }
