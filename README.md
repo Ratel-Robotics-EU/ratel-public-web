@@ -20,23 +20,13 @@ Static site for Ratel Robotics OÜ and the Badger UGV. No build step, no depende
 pages and `assets/`, so `PRODUCT.md`, `README.md` and `local/` are versioned but never
 served.
 
-One-time setup: **Settings → Pages → Source: GitHub Actions**. The site then lands on
-`https://<owner>.github.io/<repo>/` — share that with the team.
+The site is live at `https://ratelrobotics.eu`. The custom domain is set in
+**Settings → Pages → Custom domain**, not in a `CNAME` file; Actions deploys ignore that file.
 
-### Adding the custom domain later
+DNS is at Zone.ee: apex `A` records to `185.199.108.153`, `185.199.109.153`,
+`185.199.110.153`, `185.199.111.153`, and `www` as a `CNAME` to `ratel-robotics-eu.github.io`.
 
-There is deliberately **no `CNAME` file**. Adding one makes Pages redirect the `github.io`
-URL to the custom domain, which would break team sharing before DNS is ready.
-
-When you want `ratelrobotics.eu` live:
-
-1. DNS at Zone.ee — apex `A` records to `185.199.108.153`, `185.199.109.153`,
-   `185.199.110.153`, `185.199.111.153`.
-2. Settings → Pages → Custom domain → `ratelrobotics.eu`, then wait for the check to pass.
-3. Tick **Enforce HTTPS**.
-4. Add `echo ratelrobotics.eu > _site/CNAME` to the workflow's staging step.
-   Change the `og:image` URL in `index.html` to the new domain.
-5. Redirect `ratelrobotics.com` and `ratelrobotics.ee` to `ratelrobotics.eu`.
+To do: redirect `ratelrobotics.com` and `ratelrobotics.ee` to `ratelrobotics.eu`.
 
 ## Making changes
 
